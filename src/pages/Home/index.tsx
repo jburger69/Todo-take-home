@@ -7,6 +7,10 @@ export default () => {
   const [todo, setTodo] = useState<string>("");
   const [todoList, setTodoList] = useState([]);
 
+  const handleChange = (e) => {
+    console.log(e.target.value)
+  }
+
   return (
     <DefaultLayout>
       <section className="bg-light">
@@ -18,6 +22,7 @@ export default () => {
                 type="text"
                 placeholder="Todo..."
                 name="todo"
+                onChange={handleChange}
               />
             </div>
             <button>Add Todo</button>
