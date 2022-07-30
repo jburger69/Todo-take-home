@@ -9,11 +9,6 @@ export default () => {
         <Container>
           <Row>
             <h1 className="text-center">To Do List</h1>
-            <p className="text-center">
-              Please add a Todo App Here
-              <br />
-              (See README.md for more info)
-            </p>
           </Row>
         </Container>
       </section>
