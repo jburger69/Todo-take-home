@@ -11,6 +11,10 @@ export default () => {
     setTodo(event.target.value)
   }
 
+  const addTodo = (): void => {
+    setTodoList([...todoList, todo]);
+  }
+
   return (
     <DefaultLayout>
       <section className="bg-light">
@@ -25,7 +29,7 @@ export default () => {
                 onChange={handleChange}
               />
             </div>
-            <button>Add Todo</button>
+            <button onClick={addTodo}>Add Todo</button>
           </Row>
         </Container>
       </section>
