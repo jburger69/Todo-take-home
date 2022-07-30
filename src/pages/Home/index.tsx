@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import DefaultLayout from "@components/layout/defaultLayout";
 import { Container, Row } from "react-bootstrap";
 
@@ -7,8 +7,8 @@ export default () => {
   const [todo, setTodo] = useState<string>("");
   const [todoList, setTodoList] = useState([]);
 
-  const handleChange = (e) => {
-    console.log(e.target.value)
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    setTodo(event.target.value)
   }
 
   return (
