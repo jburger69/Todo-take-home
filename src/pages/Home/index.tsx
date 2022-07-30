@@ -4,6 +4,9 @@ import DefaultLayout from "@components/layout/defaultLayout";
 import { Container, Row } from "react-bootstrap";
 
 export default () => {
+  const [todo, setTodo] = useState<string>("");
+  const [todoList, setTodoList] = useState([]);
+
   return (
     <DefaultLayout>
       <section className="bg-light">
