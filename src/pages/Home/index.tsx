@@ -43,7 +43,7 @@ export default () => {
             </div>
             <div className="todoList">
               {todoList.map((todo: ITodo, key: number) => {
-                return <TodoTask key={key} />
+                return <TodoTask key={key} todo={todo} />
               })}
             </div>
           </Row>
