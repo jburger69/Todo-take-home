@@ -12,7 +12,7 @@ const TodoTask = ({ todo, completeTodo }: Props) => {
         {todo.todo}
         <button onClick={() => {
             completeTodo(todo.todo);
-        }}>X</button>
+        }}>Remove</button>
     </div>
   )
 }
