@@ -5,9 +5,11 @@ interface Props {
     todo: ITodo;
 }
 
-const TodoTask = () => {
+const TodoTask = ({ todo }: Props) => {
   return (
-    <div>task</div>
+    <div className="todoTask">
+        {todo.todo}
+    </div>
   )
 }
 
