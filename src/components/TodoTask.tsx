@@ -9,6 +9,7 @@ const TodoTask = ({ todo }: Props) => {
   return (
     <div className="todoTask">
         {todo.todo}
+        <button>X</button>
     </div>
   )
 }
