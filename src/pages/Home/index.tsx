@@ -27,17 +27,21 @@ export default () => {
       <section className="bg-light">
         <Container>
           <Row>
-            <h1 className="text-center">To Do List</h1>
-            <div>
-              <input
-                type="text"
-                placeholder="Todo..."
-                name="todo"
-                value={todo}
-                onChange={handleChange}
-              />
+            <div className="formContainer">
+              <h1 className="text-center">To Do List</h1>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Todo..."
+                  name="todo"
+                  value={todo}
+                  onChange={handleChange}
+                />
+              </div>
+              <button onClick={addTodo}>Add Todo</button>
             </div>
-            <button onClick={addTodo}>Add Todo</button>
+            <div className="todoList">
+            </div>
           </Row>
         </Container>
       </section>
