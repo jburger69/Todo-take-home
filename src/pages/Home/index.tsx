@@ -4,7 +4,7 @@ import DefaultLayout from "@components/layout/defaultLayout";
 import { Container, Row } from "react-bootstrap";
 import TodoTask from "@components/TodoTask";
 
-interface ITodo {
+export interface ITodo {
   todo: string;
 }
 
@@ -42,8 +42,8 @@ export default () => {
               <button onClick={addTodo}>Add Todo</button>
             </div>
             <div className="todoList">
-              {todoList.map(() => {
-                return <TodoTask />
+              {todoList.map((todo: ITodo, key: number) => {
+                return <TodoTask key={key} />
               })}
             </div>
           </Row>
