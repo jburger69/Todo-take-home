@@ -20,7 +20,12 @@ export default () => {
     const newTodo = {todo: todo};
     setTodoList([...todoList, newTodo]);
     setTodo("");
-    console.log(todoList)
+  }
+
+  const completeTodo = (todoToDelete: string): void => {
+    setTodoList(todoList.filter((todo) => {
+      return todo.todo != todoToDelete;
+    }))
   }
 
   return (
@@ -43,7 +48,7 @@ export default () => {
             </div>
             <div className="todoList">
               {todoList.map((todo: ITodo, key: number) => {
-                return <TodoTask key={key} todo={todo} />
+                return <TodoTask key={key} todo={todo} completeTodo={completeTodo} />
               })}
             </div>
           </Row>
