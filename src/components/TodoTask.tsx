@@ -3,13 +3,16 @@ import { ITodo } from '@pages/Home/index';
 
 interface Props {
     todo: ITodo;
+    completeTodo(todoToDelete: string): void;
 }
 
-const TodoTask = ({ todo }: Props) => {
+const TodoTask = ({ todo, completeTodo }: Props) => {
   return (
     <div className="todoTask">
         {todo.todo}
-        <button>X</button>
+        <button onClick={() => {
+            completeTodo(todo.todo);
+        }}>X</button>
     </div>
   )
 }
