@@ -33,8 +33,8 @@ export default () => {
       <section className="bg-light">
         <Container>
           <Row>
+          <h1 className="text-center">To Do List</h1>
             <div className="formContainer">
-              <h1 className="text-center">To Do List</h1>
               <div>
                 <input
                   type="text"
