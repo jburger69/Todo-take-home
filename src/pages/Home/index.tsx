@@ -6,6 +6,7 @@ import TodoTask from "@components/TodoTask";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import "@pages/Home/Index.css"
 
 export interface ITodo {
   todo: string;
@@ -37,6 +38,9 @@ export default () => {
         <Container>
           <Row>
           <h1 className="text-center" style={{margin: "50px"}}>To Do List</h1>
+          <p className="entryMessage">Welcome, Please enter some task's that you need to complete. When task is completed you can click on the task
+            to cross it out, or you can delete the task you want when finished.
+          </p>
             <div className="formContainer" style={{margin: "3%"}}>
               <div>
                 <InputGroup className="mb-3">
