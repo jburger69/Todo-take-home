@@ -1,8 +1,22 @@
+
 .todoTask {
-    margin: 75px;
+    margin: 15px;
     padding: 10px;
-    /* border: 10px; */
     border-style: solid;
     border-radius: 5px;
     display: flex;
+    width: auto;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgba(207, 52, 52, 0.5); 
+}
+
+.taskName {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 30px;
+}
+
+.removeTask {
+    margin-right: 40px;
+    margin-left: auto;
 }
