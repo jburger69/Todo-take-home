@@ -36,8 +36,8 @@ export default () => {
       <section className="bg-light">
         <Container>
           <Row>
-          <h1 className="text-center">To Do List</h1>
-            <div className="formContainer">
+          <h1 className="text-center" style={{margin: "50px"}}>To Do List</h1>
+            <div className="formContainer" style={{margin: "3%"}}>
               <div>
                 <InputGroup className="mb-3">
                   <Form.Control
