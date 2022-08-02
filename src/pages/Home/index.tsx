@@ -3,6 +3,9 @@ import { useState, ChangeEvent } from "react";
 import DefaultLayout from "@components/layout/defaultLayout";
 import { Container, Row } from "react-bootstrap";
 import TodoTask from "@components/TodoTask";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export interface ITodo {
   todo: string;
@@ -36,15 +39,21 @@ export default () => {
           <h1 className="text-center">To Do List</h1>
             <div className="formContainer">
               <div>
-                <input
-                  type="text"
-                  placeholder="Todo..."
-                  name="todo"
-                  value={todo}
-                  onChange={handleChange}
-                />
+                <InputGroup className="mb-3">
+                  <Form.Control
+                    type="text"
+                    placeholder="Add Name of Task.."
+                    name="todo"
+                    value={todo}
+                    onChange={handleChange}
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <Button onClick={addTodo} variant="outline-secondary">
+                    Add Todo
+                  </Button>
+                </InputGroup>
               </div>
-              <button onClick={addTodo}>Add Todo</button>
             </div>
             <div className="todoList">
               {todoList.map((todo: ITodo, key: number) => {
