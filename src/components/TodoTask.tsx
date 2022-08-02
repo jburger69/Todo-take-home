@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ITodo } from '@pages/Home/index';
+import '../components/TodoTask.css';
 
 interface Props {
     todo: ITodo;
